@@ -1,0 +1,14 @@
+# Local data, logs and user backups
+backups/
+demo-backups/
+preferences.json
+*.log
+*.tmp
+
+# Build and test outputs
+dist/
+__pycache__/
+.pytest_cache/
+.playwright/
+node_modules/
+.DS_Store

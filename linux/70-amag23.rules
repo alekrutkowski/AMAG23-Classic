@@ -1,0 +1,6 @@
+# Optional administrator-installed rules for an active local Linux seat.
+# Review before placing this file in /etc/udev/rules.d/.
+# Normal ps2avrGB device; HID API code selects the vendor-specific collection.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="20a0", ATTRS{idProduct}=="422d", TAG+="uaccess"
+# Factory bootloader, matched by VID/PID AND product/manufacturer.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="16c0", ATTRS{idProduct}=="05df", ATTRS{product}=="HIDBoot", ATTRS{manufacturer}=="obdev.at", TAG+="uaccess"
